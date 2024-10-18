@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Malayalam PDF Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    input[type="file"], input[type="text"] {
+      margin-bottom: 20px;
+      width: 100%;  /* Make input fields wider */
+    }
+    #question {
+      height: 100px;  /* Increase the height of the question input */
+    }
+    #chat {
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-height: 400px;
+      overflow-y: scroll;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Malayalam PDF Chatbot</h1>
+    <input type="file" id="pdf-upload"><br>
+    <input type="text" id="url" placeholder="Enter website URL..."><br>
+    <div id="chat"></div>
+    <input type="text" id="question" placeholder="Ask a question...">
+    <button id="ask">Ask</button>
+    <button id="start-record">Start Recording</button>
+    <button id="stop-record" disabled>Stop Recording</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
+  <script src="/static/chatbot.js"></script>
+</body>
+</html>
